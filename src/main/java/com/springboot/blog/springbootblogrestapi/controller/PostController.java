@@ -40,10 +40,14 @@ public class PostController {
         return new ResponseEntity<>(postService.createPost(postDto), HttpStatus.CREATED);
     }
 
-
-    @Operation(summary = "GET ALL Post REST API",
-            description = "GET ALL Post REST API is user to fetch all the posts from the database")
-    @ApiResponse(responseCode = "200",description = "HTTP STATUS 200 SUCCESS")
+    @Operation(
+            summary = "Get All Posts REST API",
+            description = "Get All Posts REST API is used to fetch all the posts from the database"
+    )
+    @ApiResponse(
+            responseCode = "200",
+            description = "Http Status 200 SUCCESS"
+    )
     //get all  posts REST API
     @GetMapping
     public PostResponse getAllPosts(
